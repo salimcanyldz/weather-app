@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@drawable/backgroud"
+    tools:context=".model.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/nearestLocationsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/nearestLocTVContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="30sp"
+                android:text="@string/nearest_locations">
+            </TextView>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/locationsHolderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/nearestLocTVContainer"
+            android:orientation="vertical">
+
+        </ListView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/mainPageLoader"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </ProgressBar>
+
+    <TextView
+        android:id="@+id/errorHandlerTextView"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="@string/check_your_internet_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+</RelativeLayout>
